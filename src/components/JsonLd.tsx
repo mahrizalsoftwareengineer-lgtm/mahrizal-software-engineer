@@ -1,5 +1,6 @@
 import { cases } from "@/content/cases";
 import { site, skills } from "@/content/site";
+import { safeJsonLd } from "@/lib/security";
 import { absoluteUrl, seo } from "@/lib/seo";
 
 export function JsonLd() {
@@ -54,15 +55,15 @@ export function JsonLd() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(person) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(website) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolio) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(portfolio) }}
       />
     </>
   );

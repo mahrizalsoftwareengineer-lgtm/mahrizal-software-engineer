@@ -10,10 +10,10 @@ export function Footer() {
           conversations.
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href={site.github} target="_blank" rel="noreferrer">
+          <Link href={site.github} target="_blank" rel="noopener noreferrer">
             GitHub
           </Link>
-          <Link href={site.linkedin} target="_blank" rel="noreferrer">
+          <Link href={site.linkedin} target="_blank" rel="noopener noreferrer">
             LinkedIn
           </Link>
           <a href={`mailto:${site.email}`}>{site.email}</a>

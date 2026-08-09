@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cases, getCaseBySlug } from "@/content/cases";
 import { site } from "@/content/site";
+import { isSafeHttpUrl, safeJsonLd } from "@/lib/security";
 import { absoluteUrl } from "@/lib/seo";
 
 type Props = {
@@ -76,7 +77,7 @@ export default async function CasePage({ params }: Props) {
     <article className="pb-20 pt-28">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(caseLd) }}
       />
       <div className="container-page">
         <div className="flex flex-wrap gap-4">
@@ -211,11 +212,10 @@ function Section({ title, body }: { title: string; body: string }) {
 }
 
 function EvidenceLink({ href, label }: { href: string; label: string }) {
-  const isPlaceholder = href.includes("YOUR_");
-  if (isPlaceholder) {
+  if (!isSafeHttpUrl(href) || href.includes("YOUR_")) {
     return (
       <span className="block font-semibold text-ink-soft">
-        {label} (add URL first)
+        {label} (unavailable)
       </span>
     );
   }
@@ -224,7 +224,7 @@ function EvidenceLink({ href, label }: { href: string; label: string }) {
     <a
       href={href}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className="block font-semibold text-teal-deep hover:text-ink"
     >
       {label} ↗

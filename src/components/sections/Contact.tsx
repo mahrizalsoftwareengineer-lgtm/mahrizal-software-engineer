@@ -27,7 +27,7 @@ export function Contact() {
             )}
             className="btn btn-ink"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             WhatsApp
           </a>
@@ -35,7 +35,7 @@ export function Contact() {
             href={site.github}
             className="btn btn-ink"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             GitHub
           </Link>
@@ -43,7 +43,7 @@ export function Contact() {
             href={site.linkedin}
             className="btn btn-ink"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             LinkedIn
           </Link>
