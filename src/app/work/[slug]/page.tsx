@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cases, getCaseBySlug } from "@/content/cases";
+import { site } from "@/content/site";
+import { absoluteUrl } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -15,10 +17,37 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const item = getCaseBySlug(slug);
-  if (!item) return { title: "Case not found" };
+  if (!item) return { title: "Case not found", robots: { index: false } };
+
+  const url = absoluteUrl(`/work/${item.slug}`);
+  const description = `${item.subtitle} Case study oleh ${site.fullName} — ${item.tags.join(", ")}.`;
+
   return {
     title: item.title,
-    description: item.subtitle,
+    description,
+    keywords: [item.title, ...item.tags, ...item.stack, site.fullName],
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      type: "article",
+      url,
+      title: item.title,
+      description,
+      images: item.image
+        ? [
+            {
+              url: absoluteUrl(item.image),
+              alt: item.imageAlt || item.title,
+            },
+          ]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: item.title,
+      description,
+    },
   };
 }
 
@@ -27,8 +56,28 @@ export default async function CasePage({ params }: Props) {
   const item = getCaseBySlug(slug);
   if (!item) notFound();
 
+  const caseLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: item.title,
+    description: item.subtitle,
+    url: absoluteUrl(`/work/${item.slug}`),
+    image: item.image ? absoluteUrl(item.image) : undefined,
+    author: {
+      "@type": "Person",
+      name: site.fullName,
+      url: absoluteUrl("/"),
+    },
+    keywords: [...item.tags, ...item.stack].join(", "),
+    inLanguage: "id-ID",
+  };
+
   return (
     <article className="pb-20 pt-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseLd) }}
+      />
       <div className="container-page">
         <Link
           href="/#work"

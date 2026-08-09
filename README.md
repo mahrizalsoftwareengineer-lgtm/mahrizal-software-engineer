@@ -58,6 +58,24 @@ Pastikan di Vercel Project Settings → Git:
 - Connected repo: `mahrizalsoftwareengineer-lgtm/mahrizal-software-engineer`
 - Production Branch: `main`
 
+## SEO
+
+Sudah disiapkan:
+- metadata + Open Graph + Twitter card
+- `sitemap.xml` & `robots.txt`
+- JSON-LD (Person, WebSite, case studies)
+- canonical URL
+- OG image dinamis
+
+Agar lebih cepat terindex di Google:
+1. Buka [Google Search Console](https://search.google.com/search-console)
+2. Add property: `https://mahrizal-software-engineer.vercel.app`
+3. Submit sitemap: `https://mahrizal-software-engineer.vercel.app/sitemap.xml`
+4. Request indexing untuk homepage + case utama (SIA Militan)
+5. Pakai nama konsisten di LinkedIn/GitHub/CV agar brand search “Mahrizal Software Engineer” menguat
+
+Catatan realistis: ranking #1 untuk keyword generik (“software engineer”) sangat sulit. Target paling realistis adalah brand query + long-tail (nama + role + lokasi/stack).
+
 ## Cara pakai saat apply
 
 Di CV / form aplikasi, taruh **satu link**: URL Vercel portfolio.
