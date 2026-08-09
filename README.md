@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mahrizal Portfolio
 
-## Getting Started
+Portfolio pribadi siap deploy ke **GitHub + Vercel**.
 
-First, run the development server:
+Dipakai untuk:
+- apply kerja (Engineering Manager / AI Developer / System Analyst)
+- meyakinkan calon klien agency
+
+## Jalankan lokal
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Edit konten (penting)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Semua teks utama ada di:
 
-## Learn More
+| File | Isi |
+|---|---|
+| `src/content/site.ts` | Nama, bio, kontak, roles, about |
+| `src/content/cases.ts` | 4 case studies + tag role + link bukti |
 
-To learn more about Next.js, take a look at the following resources:
+Yang wajib diganti sebelum go public:
+1. `github`, `linkedin`, `agencyUrl` di `site.ts`
+2. Link live/GitHub di tiap case
+3. Detail Case 2–4 agar cocok dengan pengalamanmu (cari komentar `TODO`)
+4. `metadataBase` URL di `src/app/layout.tsx`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Opsional:
+- taruh CV di `public/resume.pdf`
+- tambah screenshot case di `public/cases/`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy ke GitHub
 
-## Deploy on Vercel
+```bash
+git add .
+git commit -m "Initial portfolio site"
+git branch -M main
+git remote add origin https://github.com/USERNAME/mahrizal-portfolio.git
+git push -u origin main
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy ke Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Buka [vercel.com/new](https://vercel.com/new)
+2. Import repo `mahrizal-portfolio`
+3. Framework: Next.js (otomatis)
+4. Deploy
+5. Copy URL production → update di `site.ts` + `layout.tsx` + CV/LinkedIn
+
+## Cara pakai saat apply
+
+Di CV / form aplikasi, taruh **satu link**: URL Vercel portfolio.
+
+Contoh:
+- Engineering Manager → tonjolkan case delivery + agency
+- AI Developer → tonjolkan case AI + engineering
+- System Analyst → tonjolkan case requirement + agency
+- Klien → tonjolkan agency + delivery
+
+GitHub tetap sebagai bukti sekunder (repo per case).
