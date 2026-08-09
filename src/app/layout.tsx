@@ -50,6 +50,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: absoluteUrl("/"),
   },
+  verification: {
+    google: "wrYSZTJP5CLKiXl3-7Bt-AGuXG6hS0IKGgFi6pqcSoo",
+  },
   robots: {
     index: true,
     follow: true,
