@@ -29,6 +29,47 @@ export type CaseStudy = {
 
 export const cases: CaseStudy[] = [
   {
+    slug: "sia-militan",
+    title: "SIA Militan: sistem informasi anggota untuk 2.000 user aktif",
+    subtitle:
+      "Platform komunitas berbasis Laravel dengan keamanan tinggi, cache, message queue, dan Redis.",
+    tags: ["Engineering", "System Analysis", "Delivery/PM"],
+    year: "2023–2025",
+    status: "Live",
+    featured: true,
+    context:
+      "Komunitas membutuhkan sistem informasi anggota (SIA) yang mampu menangani operasional harian secara terpusat — data anggota, aktivitas, dan layanan internal — dengan jumlah pengguna aktif mencapai sekitar 2.000 orang.",
+    problem:
+      "Tanpa sistem yang andal, data anggota mudah tidak sinkron, akses rentan, dan performa menurun saat traffic atau proses background meningkat. Diperlukan fondasi yang aman sekaligus siap scale untuk beban nyata.",
+    role: "Software engineer dengan keterlibatan system design dan pengamanan aplikasi.",
+    actions: [
+      "Membangun SIA Militan dengan Laravel sebagai core aplikasi untuk manajemen anggota komunitas.",
+      "Menerapkan praktik security tinggi pada autentikasi, otorisasi, dan proteksi data sensitif anggota.",
+      "Merancang system design untuk performa: caching, message queue, dan Redis untuk workload yang tidak harus sinkron.",
+      "Memastikan alur operasional tetap stabil untuk pemakaian harian oleh ribuan user aktif.",
+    ],
+    tradeoffs: [
+      "Memisahkan pekerjaan berat ke message queue agar request user tetap responsif.",
+      "Memakai cache/Redis untuk mengurangi beban database pada data yang sering diakses, dengan trade-off invalidation yang harus dikelola hati-hati.",
+    ],
+    results: [
+      "Sistem dipakai sekitar 2.000 user aktif untuk operasional komunitas.",
+      "Arsitektur siap menahan beban proses background tanpa mengorbankan pengalaman user.",
+      "Fondasi security dan system design menjadi bukti kemampuan engineering di scale nyata.",
+    ],
+    stack: [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "Redis",
+      "Cache",
+      "Message Queue",
+      "Security hardening",
+    ],
+    links: {},
+    note: "Tambahkan link demo/screenshot (boleh di-blur) jika boleh dipublikasikan.",
+  },
+  {
     slug: "mahrizal-digital-agency",
     title: "Mahrizal Digital: dari ide ke situs live untuk UMKM",
     subtitle:
