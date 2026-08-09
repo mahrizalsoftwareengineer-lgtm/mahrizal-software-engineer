@@ -2,7 +2,7 @@ export type RoleTag =
   | "Engineering"
   | "System Analysis"
   | "Delivery/PM"
-  | "AI";
+  | "AI Developer";
 
 export type CaseStudy = {
   slug: string;
@@ -35,7 +35,7 @@ export const cases: CaseStudy[] = [
     title: "SIA Militan: sistem informasi anggota untuk 2.000 user aktif",
     subtitle:
       "Platform komunitas Laravel yang dibangun end-to-end dengan pendekatan AI-assisted development, Redis, dan message queue.",
-    tags: ["AI", "Engineering", "System Analysis"],
+    tags: ["AI Developer", "Engineering", "System Analysis"],
     year: "2023–2025",
     status: "Live",
     featured: true,
@@ -81,7 +81,7 @@ export const cases: CaseStudy[] = [
     title: "MUC Net Timesheet: dashboard productivity untuk penugasan",
     subtitle:
       "Dashboard analytics dari data timesheet MySQL — monitoring, controlling, dan keputusan berbasis data.",
-    tags: ["AI", "Engineering", "System Analysis"],
+    tags: ["AI Developer", "Engineering", "System Analysis"],
     year: "2023–2025",
     status: "Live",
     featured: true,
@@ -192,7 +192,7 @@ export const cases: CaseStudy[] = [
     title: "Fitur AI yang masuk ke workflow — bukan chatbot pajangan",
     subtitle:
       "Membangun bantuan AI yang measurable: input jelas, output berguna, ada fallback manusia.",
-    tags: ["AI", "Engineering", "System Analysis"],
+    tags: ["AI Developer", "Engineering", "System Analysis"],
     year: "2025–2026",
     status: "In progress",
     featured: true,
