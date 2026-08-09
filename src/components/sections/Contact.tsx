@@ -7,15 +7,18 @@ export function Contact() {
       <div className="container-page">
         <p className="eyebrow">Contact</p>
         <h2 className="display mt-3 max-w-3xl text-3xl text-ink md:text-5xl">
-          Ready to discuss opportunities or product needs.
+          Ready to discuss AI Developer or Software Engineer roles.
         </h2>
         <p className="prose-muted mt-5 max-w-2xl text-lg">
-          Reach out by email or WhatsApp, or review GitHub for technical proof.
-          This portfolio is built for hiring conversations and client confidence.
+          Reach out by email or WhatsApp, review the CV, or check GitHub for
+          technical proof. Built for fast hiring conversations.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          <a href={`mailto:${site.email}`} className="btn btn-primary">
+          <Link href={site.resumeUrl} className="btn btn-primary">
+            View CV
+          </Link>
+          <a href={`mailto:${site.email}`} className="btn btn-ink">
             Email me
           </a>
           <a

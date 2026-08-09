@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { cases } from "@/content/cases";
+import { getPublicCases } from "@/content/cases";
 
 export function Work() {
+  const cases = getPublicCases();
+
   return (
     <section id="work" className="section-space bg-white/40">
       <div className="container-page">
@@ -12,7 +14,7 @@ export function Work() {
             Case studies that show role, decisions, and impact.
           </h2>
           <p className="prose-muted max-w-sm text-sm md:text-right">
-            Each case can be read through Engineering, Analysis, Delivery, or AI Developer.
+            Focused on live systems and delivery ownership — with evidence recruiters can scan quickly.
           </p>
         </div>
 

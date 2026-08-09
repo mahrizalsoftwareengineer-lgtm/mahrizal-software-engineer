@@ -7,7 +7,7 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: site.fullName,
-    jobTitle: "Software Engineer",
+    jobTitle: "AI Developer",
     description: seo.description,
     url: absoluteUrl("/"),
     email: site.email,

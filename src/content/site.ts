@@ -1,19 +1,27 @@
 export const site = {
   name: "Mahrizal",
   fullName: "Mahrizal",
-  title: "Software Engineer · System Analyst · Project Manager · AI Developer",
+  title: "AI Developer · Software Engineer",
+  titleSupport: "System Analysis · Project Delivery",
   tagline:
-    "I turn ambiguous business problems into production-ready software and AI solutions — from analysis to delivery.",
+    "I turn ambiguous business problems into production-ready software and AI-assisted solutions — from analysis to delivery.",
   location: "Bogor, Indonesia",
   email: "amahrizal@gmail.com",
   whatsapp: "6288210909810",
   phoneDisplay: "+62 882-1090-9810",
   github: "https://github.com/mahrizalsoftwareengineer-lgtm",
   linkedin: "https://linkedin.com/in/mahrizal",
-  agencyUrl: "https://YOUR_AGENCY_URL.vercel.app",
   siteUrl: "https://mahrizal-software-engineer.vercel.app",
-  resumeUrl: "/resume.pdf",
-  availability: "Open to opportunities — Engineering Manager, AI Developer, System Analyst",
+  resumeUrl: "/resume",
+  availability: "Open to opportunities — AI Developer, Software Engineer, System Analyst",
+  heroStack: [
+    "Laravel",
+    "MySQL",
+    "Redis",
+    "Next.js",
+    "System Design",
+    "Data Analytics",
+  ],
 } as const;
 
 export const skills = {
@@ -28,6 +36,7 @@ export const skills = {
     "Message Queue",
     "System Analysis",
     "UML",
+    "Data Analytics",
   ],
   soft: [
     "Communication",
@@ -40,6 +49,12 @@ export const skills = {
 } as const;
 
 export const roles = [
+  {
+    id: "ai",
+    label: "AI Developer",
+    summary:
+      "I design data and AI-assisted solutions that plug into real workflows — dashboards, automation, and decision support — not demo-only showcases.",
+  },
   {
     id: "engineering",
     label: "Software Engineer",
@@ -58,11 +73,32 @@ export const roles = [
     summary:
       "I protect scope, risk, and timeline so the team stays focused and stakeholders stay aligned.",
   },
+] as const;
+
+export const experience = [
   {
-    id: "ai",
-    label: "AI Developer",
+    company: "MUC — Internal Platforms",
+    role: "Software Engineer · AI Developer",
+    period: "2023 – Present",
     summary:
-      "I design AI features that plug into real workflows — not demo-only model showcases.",
+      "Build and improve internal systems for operations, including timesheet productivity analytics for monitoring, controlling, and assignment decisions.",
+    highlights: [
+      "Owned MUC Net Timesheet productivity dashboard (Laravel + MySQL analytics)",
+      "Collaborated with stakeholders across operations and management",
+      "Focused on measurable visibility for workload and compliance",
+    ],
+  },
+  {
+    company: "SIA Militan",
+    role: "Full-stack Owner · AI-assisted Development",
+    period: "2023 – 2025",
+    summary:
+      "Designed and shipped a production membership information system used daily by about 2,000 active users.",
+    highlights: [
+      "End-to-end ownership: architecture, security, delivery, maintenance",
+      "Redis, caching, and message queues for production workloads",
+      "AI-assisted development with personal ownership of quality gates",
+    ],
   },
 ] as const;
 
@@ -88,15 +124,32 @@ export const strengths = [
 export const about = {
   headline: "I build credibility through verifiable results, not empty claims.",
   paragraphs: [
-    "I am building a healthy career path in a supportive work environment where I can deepen my craft and deliver meaningful impact.",
-    "At work, I am strongest at bridging — connecting business needs, technical decisions, and execution that can ship. That is why this portfolio presents Engineering, Analysis, Delivery, and AI through one consistent narrative.",
-    "I am looking for a collaborative team with clear standards. From there, I want to grow deeper professionally and keep raising the quality of what I ship.",
+    "I am building a focused career as an AI Developer and Software Engineer — shipping systems that help teams monitor work, make decisions, and operate reliably in production.",
+    "At work, I am strongest at bridging business needs, technical decisions, and execution that can ship. This portfolio highlights live systems and decision-support work with clear ownership.",
+    "I am looking for a collaborative team with clear standards, where I can deepen AI and engineering craft while delivering measurable impact.",
   ],
   principles: [
     "Start from the problem, not from the tools.",
     "Ship something useful first; refine after real signals appear.",
     "Document just enough so others can continue without guessing.",
-    "Use AI only when it removes a measurable bottleneck.",
+    "Use AI and analytics only when they remove a measurable bottleneck.",
+  ],
+} as const;
+
+export const resume = {
+  summary:
+    "AI Developer and Software Engineer based in Bogor, Indonesia. Experienced in Laravel, MySQL, Redis, and analytics dashboards that support operational monitoring and decision-making. Comfortable owning systems end-to-end — from requirements to production.",
+  selectedWork: [
+    {
+      title: "MUC Net Timesheet",
+      detail:
+        "Productivity dashboard from MySQL timesheet data for assignment monitoring and compliance visibility.",
+    },
+    {
+      title: "SIA Militan",
+      detail:
+        "Membership information system for ~2,000 active users with Redis, queues, and security hardening.",
+    },
   ],
 } as const;
 

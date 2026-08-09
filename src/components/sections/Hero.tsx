@@ -12,12 +12,28 @@ export function Hero() {
         <p className="rise rise-delay-2 mt-4 max-w-3xl text-xl font-medium text-[#e7f4f3] md:text-2xl">
           {site.title}
         </p>
+        <p className="rise rise-delay-2 mt-2 text-base text-[#9fc4c7] md:text-lg">
+          {site.titleSupport}
+        </p>
         <p className="rise rise-delay-2 mt-4 max-w-2xl text-lg leading-relaxed text-[#d7e8ea] md:text-xl">
           {site.tagline}
         </p>
+        <div className="rise rise-delay-3 mt-6 flex flex-wrap gap-2">
+          {site.heroStack.map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-[#d7e8ea]"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
         <div className="rise rise-delay-3 mt-10 flex flex-wrap gap-3">
           <Link href="/#work" className="btn btn-primary">
             View selected work
+          </Link>
+          <Link href={site.resumeUrl} className="btn btn-ghost">
+            View CV
           </Link>
           <Link href="/#contact" className="btn btn-ghost">
             Contact me

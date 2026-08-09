@@ -4,21 +4,21 @@ export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || site.siteUrl;
 
 export const seo = {
-  title: `${site.fullName} — Software Engineer, System Analyst & AI Developer`,
+  title: `${site.fullName} — AI Developer & Software Engineer`,
   description:
-    "Portfolio of Mahrizal: Software Engineer, System Analyst, Project Manager, and AI Developer based in Bogor, Indonesia. Specializing in Laravel, React, Next.js, PostgreSQL, Redis, and system design for production-ready products.",
+    "Portfolio of Mahrizal: AI Developer and Software Engineer based in Bogor, Indonesia. Laravel, MySQL, Redis, Next.js, data analytics, and production system design.",
   keywords: [
     "Mahrizal",
+    "Mahrizal AI Developer",
     "Mahrizal Software Engineer",
-    "Mahrizal System Analyst",
+    "AI Developer Indonesia",
     "Software Engineer Bogor",
-    "System Analyst Indonesia",
     "Laravel Developer Indonesia",
     "Next.js Developer",
-    "AI Developer Indonesia",
+    "System Analyst Indonesia",
     "Software Engineer Portfolio",
     "SIA Militan",
-    "Engineering Manager Indonesia",
+    "MUC Net Timesheet",
   ],
 } as const;
 

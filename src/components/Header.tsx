@@ -7,9 +7,10 @@ import { site } from "@/content/site";
 const links = [
   { href: "/", label: "Home" },
   { href: "/#work", label: "Work" },
+  { href: "/#experience", label: "Experience" },
   { href: "/#skills", label: "Skills" },
-  { href: "/#roles", label: "Roles" },
   { href: "/#about", label: "About" },
+  { href: "/resume", label: "CV" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -42,9 +43,14 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Link href="/#contact" className="btn btn-primary text-sm">
-          Let&apos;s talk
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link href="/resume" className="btn btn-ink hidden text-sm sm:inline-flex">
+            CV
+          </Link>
+          <Link href="/#contact" className="btn btn-primary text-sm">
+            Let&apos;s talk
+          </Link>
+        </div>
       </div>
     </header>
   );

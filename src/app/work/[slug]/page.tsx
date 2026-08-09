@@ -163,11 +163,6 @@ export default async function CasePage({ params }: Props) {
               </ul>
             </section>
 
-            {item.note ? (
-              <p className="rounded-xl border border-dashed border-teal/40 bg-teal/5 px-4 py-3 text-sm text-ink-soft">
-                Editor note: {item.note}
-              </p>
-            ) : null}
           </div>
 
           <aside className="h-fit border border-line bg-paper/80 p-5 md:sticky md:top-24">
@@ -193,15 +188,11 @@ export default async function CasePage({ params }: Props) {
               ) : null}
               {item.image ? (
                 <p className="text-ink-soft">Screenshot available on this page.</p>
-              ) : null}
-              {!item.links.live &&
-              !item.links.demo &&
-              !item.links.github &&
-              !item.image ? (
+              ) : (
                 <p className="text-ink-soft">
-                  Add a live/GitHub link in `src/content/cases.ts`.
+                  Internal system — screenshots available on request (sensitive data).
                 </p>
-              ) : null}
+              )}
             </div>
           </aside>
         </div>
