@@ -12,7 +12,7 @@ export function Work() {
             Case studies yang menunjukkan role, keputusan, dan impact.
           </h2>
           <p className="prose-muted max-w-sm text-sm md:text-right">
-            Tiap case bisa dibaca dari sudut Engineering, Analysis, Delivery, atau AI.
+            Tiap case bisa dibaca dari sudut Engineering, Analysis, Delivery, atau AI Developer.
           </p>
         </div>
 
