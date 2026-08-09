@@ -8,7 +8,7 @@ export const site = {
   email: "amahrizal@gmail.com",
   whatsapp: "6288210909810",
   phoneDisplay: "+62 882-1090-9810",
-  github: "https://github.com/YOUR_GITHUB_USERNAME",
+  github: "https://github.com/mahrizalit",
   linkedin: "https://linkedin.com/in/YOUR_LINKEDIN",
   agencyUrl: "https://YOUR_AGENCY_URL.vercel.app",
   resumeUrl: "/resume.pdf",
