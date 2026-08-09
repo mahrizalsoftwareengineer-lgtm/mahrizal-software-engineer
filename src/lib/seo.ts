@@ -6,7 +6,7 @@ export const siteUrl =
 export const seo = {
   title: `${site.fullName} — Software Engineer, System Analyst & AI Developer`,
   description:
-    "Portfolio Mahrizal: Software Engineer, System Analyst, Delivery Lead, dan AI Developer di Bogor, Indonesia. Spesialis Laravel, React, Next.js, PostgreSQL, Redis, serta system design untuk produk yang siap production.",
+    "Portfolio Mahrizal: Software Engineer, System Analyst, Project Manager, dan AI Developer di Bogor, Indonesia. Spesialis Laravel, React, Next.js, PostgreSQL, Redis, serta system design untuk produk yang siap production.",
   keywords: [
     "Mahrizal",
     "Mahrizal Software Engineer",

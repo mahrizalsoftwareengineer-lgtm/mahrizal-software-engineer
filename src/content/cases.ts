@@ -74,6 +74,49 @@ export const cases: CaseStudy[] = [
     links: {},
   },
   {
+    slug: "muc-net-timesheet",
+    title: "MUC Net Timesheet: dashboard productivity untuk penugasan",
+    subtitle:
+      "Platform timesheet internal berbasis Laravel + MySQL untuk monitoring, controlling, dan keputusan berbasis data.",
+    tags: ["Engineering", "System Analysis", "Delivery/PM"],
+    year: "2023–2025",
+    status: "Live",
+    featured: true,
+    context:
+      "Tim internal membutuhkan sistem timesheet harian yang tidak hanya mencatat jam kerja, tetapi juga memberi visibilitas penugasan kepada manajemen — siapa mengerjakan apa, berapa lama, dan bagaimana beban kerja tersebar antar project.",
+    problem:
+      "Data aktivitas kerja tersebar dan sulit dipakai untuk monitoring. Tanpa dashboard analitik, manajemen sulit mengontrol kepatuhan pengisian, memantau progress penugasan, dan mengambil keputusan alokasi resource secara tepat.",
+    role: "Tech lead / system owner — dari alur timesheet sampai dashboard productivity.",
+    actions: [
+      "Membangun dan memelihara platform timesheet internal (MUC Net) untuk pencatatan aktivitas kerja harian per penugasan.",
+      "Menarik dan mengolah data MySQL menjadi dashboard analytics untuk monitoring & controlling produktivitas tim.",
+      "Merancang alur pengisian timesheet yang usable: pilih periode, catat aktivitas, durasi, dan konteks project/penugasan.",
+      "Menyelaraskan kebutuhan stakeholder (karyawan, manager, operasi) agar data timesheet bisa dipakai untuk reporting dan keputusan.",
+      "Menjaga kualitas rilis lewat task breakdown, mentoring developer, dan koordinasi dengan QA/stakeholder.",
+    ],
+    tradeoffs: [
+      "Memprioritaskan visibilitas operasional (monitoring penugasan) daripada fitur analytics yang terlalu kompleks di fase awal.",
+      "Menjaga validasi data timesheet cukup ketat untuk akuntabilitas, tanpa membuat proses pengisian terasa berat bagi user harian.",
+    ],
+    results: [
+      "Tim punya satu sumber data timesheet untuk pelaporan operasional harian.",
+      "Manajemen mendapat dashboard untuk monitoring penugasan, beban kerja, dan controlling pengisian timesheet.",
+      "Keputusan alokasi resource dan evaluasi progress lebih berbasis data aktivitas aktual, bukan asumsi.",
+    ],
+    stack: [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "Dashboard analytics",
+      "Role-based access",
+      "Internal web app",
+    ],
+    // image: "/cases/muc-net-timesheet.png",
+    // imageAlt: "Halaman timesheet MUC Net — entri aktivitas kerja harian",
+    links: {},
+    note: "Tambahkan screenshot timesheet (blur data sensitif) ke public/cases/muc-net-timesheet.png. Isi metrik kepatuhan/produktivitas di results jika ada angka resmi.",
+  },
+  {
     slug: "mahrizal-digital-agency",
     title: "Mahrizal Digital: dari ide ke situs live untuk UMKM",
     subtitle:
@@ -176,7 +219,7 @@ export const cases: CaseStudy[] = [
     ],
     stack: ["Milestone planning", "Risk management", "Code review", "Release checklist"],
     links: {},
-    note: "Cocok ditonjolkan saat apply Engineering Manager / Delivery Lead.",
+    note: "Cocok ditonjolkan saat apply Engineering Manager / Project Manager.",
   },
   {
     slug: "ai-workflow-feature",

@@ -38,7 +38,7 @@ export default function OpenGraphImage() {
             {site.fullName}
           </div>
           <div style={{ fontSize: 34, color: "#d7e8ea", maxWidth: 900 }}>
-            Software Engineer · System Analyst · Delivery Lead · AI Developer
+            Software Engineer · System Analyst · Project Manager · AI Developer
           </div>
         </div>
         <div style={{ display: "flex", fontSize: 24, color: "#9fc4c7" }}>

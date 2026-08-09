@@ -1,7 +1,7 @@
 export const site = {
   name: "Mahrizal",
   fullName: "Mahrizal",
-  title: "Software Engineer · System Analyst · Delivery Lead · AI Developer",
+  title: "Software Engineer · System Analyst · Project Manager · AI Developer",
   tagline:
     "Saya mengubah masalah bisnis yang masih kabur menjadi solusi software & AI yang siap live — dari analisis sampai delivery.",
   location: "Bogor, Indonesia",
@@ -54,7 +54,7 @@ export const roles = [
   },
   {
     id: "delivery",
-    label: "Project / Delivery Lead",
+    label: "Project Manager",
     summary:
       "Menjaga scope, risiko, dan timeline agar tim tetap fokus dan stakeholder tetap aligned.",
   },
