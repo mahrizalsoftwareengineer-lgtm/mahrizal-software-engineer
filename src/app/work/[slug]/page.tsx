@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cases, getCaseBySlug } from "@/content/cases";
@@ -53,6 +54,24 @@ export default async function CasePage({ params }: Props) {
             ))}
           </div>
         </header>
+
+        {item.image ? (
+          <figure className="mt-10 overflow-hidden border border-line bg-ink">
+            <Image
+              src={item.image}
+              alt={item.imageAlt || item.title}
+              width={1600}
+              height={900}
+              className="h-auto w-full"
+              priority
+            />
+            {item.imageAlt ? (
+              <figcaption className="border-t border-white/10 px-4 py-3 text-sm text-[#c5d7da]">
+                {item.imageAlt}
+              </figcaption>
+            ) : null}
+          </figure>
+        ) : null}
 
         <div className="mt-14 grid gap-12 md:grid-cols-[1fr_280px]">
           <div className="space-y-10">
@@ -115,7 +134,13 @@ export default async function CasePage({ params }: Props) {
               {item.links.github ? (
                 <EvidenceLink href={item.links.github} label="GitHub" />
               ) : null}
-              {!item.links.live && !item.links.demo && !item.links.github ? (
+              {item.image ? (
+                <p className="text-ink-soft">Screenshot tersedia di halaman ini.</p>
+              ) : null}
+              {!item.links.live &&
+              !item.links.demo &&
+              !item.links.github &&
+              !item.image ? (
                 <p className="text-ink-soft">
                   Tambahkan link live/GitHub di `src/content/cases.ts`.
                 </p>

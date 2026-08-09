@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { cases } from "@/content/cases";
 
@@ -20,7 +21,7 @@ export function Work() {
             <Link
               key={item.slug}
               href={`/work/${item.slug}`}
-              className="case-row group grid-cols-1 md:grid-cols-[88px_1fr_auto] md:items-start"
+              className="case-row group grid-cols-1 md:grid-cols-[88px_1fr_200px_auto] md:items-center"
             >
               <span className="font-mono text-sm text-ink-soft">
                 {String(index + 1).padStart(2, "0")}
@@ -44,7 +45,20 @@ export function Work() {
                   ))}
                 </div>
               </div>
-              <span className="text-sm font-semibold text-teal-deep md:pt-8">
+              {item.image ? (
+                <div className="relative hidden h-28 overflow-hidden border border-line md:block">
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt || item.title}
+                    fill
+                    className="object-cover object-top"
+                    sizes="200px"
+                  />
+                </div>
+              ) : (
+                <span className="hidden md:block" />
+              )}
+              <span className="text-sm font-semibold text-teal-deep">
                 Baca case →
               </span>
             </Link>

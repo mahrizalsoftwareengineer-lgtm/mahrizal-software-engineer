@@ -18,6 +18,8 @@ export type CaseStudy = {
   tradeoffs: string[];
   results: string[];
   stack: string[];
+  image?: string;
+  imageAlt?: string;
   links: {
     live?: string;
     github?: string;
@@ -66,8 +68,10 @@ export const cases: CaseStudy[] = [
       "Message Queue",
       "Security hardening",
     ],
+    image: "/cases/sia-militan.png",
+    imageAlt:
+      "Halaman login SIA Militan — pilihan peran Anggota dan Admin",
     links: {},
-    note: "Tambahkan link demo/screenshot (boleh di-blur) jika boleh dipublikasikan.",
   },
   {
     slug: "mahrizal-digital-agency",
