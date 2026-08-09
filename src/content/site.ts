@@ -11,8 +11,30 @@ export const site = {
   github: "https://github.com/mahrizalsoftwareengineer-lgtm",
   linkedin: "https://linkedin.com/in/YOUR_LINKEDIN",
   agencyUrl: "https://YOUR_AGENCY_URL.vercel.app",
+  siteUrl: "https://mahrizal-software-engineer.vercel.app",
   resumeUrl: "/resume.pdf",
   availability: "Open to opportunities — Engineering Manager, AI Developer, System Analyst",
+} as const;
+
+export const skills = {
+  hard: [
+    "PHP",
+    "Laravel",
+    "MySQL",
+    "PostgreSQL",
+    "React",
+    "Next.js",
+    "System Analysis",
+    "UML",
+  ],
+  soft: [
+    "Communication",
+    "Negotiation",
+    "Problem Solving",
+    "Leadership",
+    "People Management",
+    "Time Management",
+  ],
 } as const;
 
 export const roles = [

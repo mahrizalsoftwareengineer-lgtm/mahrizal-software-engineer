@@ -21,7 +21,7 @@ Semua teks utama ada di:
 
 | File | Isi |
 |---|---|
-| `src/content/site.ts` | Nama, bio, kontak, roles, about |
+| `src/content/site.ts` | Nama, bio, kontak, roles, skills, about |
 | `src/content/cases.ts` | 4 case studies + tag role + link bukti |
 
 Yang wajib diganti sebelum go public:
@@ -44,13 +44,19 @@ git remote add origin https://github.com/USERNAME/mahrizal-portfolio.git
 git push -u origin main
 ```
 
-## Deploy ke Vercel
+## Deploy & CI/CD (Vercel)
 
-1. Buka [vercel.com/new](https://vercel.com/new)
-2. Import repo `mahrizal-portfolio`
-3. Framework: Next.js (otomatis)
-4. Deploy
-5. Copy URL production → update di `site.ts` + `layout.tsx` + CV/LinkedIn
+Live: https://mahrizal-software-engineer.vercel.app/
+
+Kalau repo sudah di-import ke Vercel, **CI/CD sudah otomatis**:
+- `git push` ke branch `main` → Vercel build & update production
+- push ke branch lain → biasanya dapat preview deployment
+
+Tidak perlu GitHub Actions terpisah untuk deploy, kecuali kamu ingin quality gate tambahan (lint/test) sebelum merge.
+
+Pastikan di Vercel Project Settings → Git:
+- Connected repo: `mahrizalsoftwareengineer-lgtm/mahrizal-software-engineer`
+- Production Branch: `main`
 
 ## Cara pakai saat apply
 

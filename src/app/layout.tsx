@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   },
   description: site.tagline,
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      "https://mahrizal-software-engineer.vercel.app",
   ),
   openGraph: {
     title: `${site.name} — Portfolio`,
