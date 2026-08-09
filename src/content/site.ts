@@ -2,9 +2,9 @@ export const site = {
   name: "Mahrizal",
   fullName: "Mahrizal",
   title: "AI Developer · Software Engineer",
-  titleSupport: "System Analysis · Project Delivery",
+  titleSupport: "Supervisor · Leading 4 software engineering teams",
   tagline:
-    "I turn ambiguous business problems into production-ready software and AI-assisted solutions — from analysis to delivery.",
+    "I turn ambiguous business problems into production-ready software and AI-assisted solutions — from analysis to delivery — while leading engineering teams.",
   location: "Bogor, Indonesia",
   email: "amahrizal@gmail.com",
   whatsapp: "6288210909810",
@@ -16,7 +16,8 @@ export const site = {
   resumeUrl: "/resume",
   photo: "/images/mahrizal.png",
   photoAlt: "Portrait of Mahrizal, AI Developer and Software Engineer",
-  availability: "Open to opportunities — AI Developer, Software Engineer, System Analyst",
+  availability:
+    "Open to opportunities — AI Developer, Software Engineer, Tech Lead / Engineering Supervisor",
   heroStack: [
     "Laravel",
     "MySQL",
@@ -72,23 +73,24 @@ export const roles = [
   },
   {
     id: "delivery",
-    label: "Project Manager",
+    label: "Supervisor / Project Manager",
     summary:
-      "I protect scope, risk, and timeline so the team stays focused and stakeholders stay aligned.",
+      "I lead engineering teams and protect scope, risk, and timeline so delivery stays focused and stakeholders stay aligned.",
   },
 ] as const;
 
 export const experience = [
   {
-    company: "MUC — Internal Platforms",
-    role: "Software Engineer · AI Developer",
+    company: "MUC — Software Engineering",
+    role: "Supervisor · Software Engineer · AI Developer",
     period: "2023 – Present",
     summary:
-      "Build and improve internal systems for operations, including timesheet productivity analytics for monitoring, controlling, and assignment decisions.",
+      "Supervise and lead 4 software engineering teams while staying hands-on on internal platforms, delivery quality, and productivity analytics for operational decisions.",
     highlights: [
+      "Lead 4 software engineering teams: priorities, mentoring, delivery rhythm, and stakeholder alignment",
       "Owned MUC Net Timesheet productivity dashboard (Laravel + MySQL analytics)",
-      "Collaborated with stakeholders across operations and management",
-      "Focused on measurable visibility for workload and compliance",
+      "Bridge business needs with technical execution across operations and management",
+      "Keep standards for code quality, release readiness, and measurable workload visibility",
     ],
   },
   {
@@ -127,9 +129,9 @@ export const strengths = [
 export const about = {
   headline: "I build credibility through verifiable results, not empty claims.",
   paragraphs: [
-    "I am building a focused career as an AI Developer and Software Engineer — shipping systems that help teams monitor work, make decisions, and operate reliably in production.",
-    "At work, I am strongest at bridging business needs, technical decisions, and execution that can ship. This portfolio highlights live systems and decision-support work with clear ownership.",
-    "I am looking for a collaborative team with clear standards, where I can deepen AI and engineering craft while delivering measurable impact.",
+    "I currently supervise 4 software engineering teams while remaining hands-on as an AI Developer and Software Engineer — shipping systems that help teams monitor work, make decisions, and operate reliably in production.",
+    "At work, I am strongest at bridging people, business needs, technical decisions, and execution that can ship. This portfolio highlights live systems, decision-support work, and leadership with clear ownership.",
+    "I am looking for a collaborative environment with clear standards, where I can deepen AI and engineering craft while leading teams that deliver measurable impact.",
   ],
   principles: [
     "Start from the problem, not from the tools.",
@@ -154,7 +156,7 @@ export const githubRepos = [
 
 export const resume = {
   summary:
-    "AI Developer and Software Engineer based in Bogor, Indonesia. Experienced in Laravel, MySQL, Redis, and analytics dashboards that support operational monitoring and decision-making. Comfortable owning systems end-to-end — from requirements to production.",
+    "AI Developer and Software Engineer based in Bogor, Indonesia. Currently supervising 4 software engineering teams while staying hands-on with Laravel, MySQL, Redis, and analytics dashboards for operational monitoring and decision-making. Comfortable owning systems and delivery end-to-end — from requirements to production.",
   selectedWork: [
     {
       title: "MUC Net Timesheet",
