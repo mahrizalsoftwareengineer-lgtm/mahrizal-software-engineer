@@ -10,6 +10,7 @@ const links = [
   { href: "/#experience", label: "Experience" },
   { href: "/#skills", label: "Skills" },
   { href: "/#about", label: "About" },
+  { href: "/#code", label: "GitHub" },
   { href: "/resume", label: "CV" },
   { href: "/#contact", label: "Contact" },
 ];
@@ -44,7 +45,15 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link href="/resume" className="btn btn-ink hidden text-sm sm:inline-flex">
+          <a
+            href={site.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ink hidden text-sm sm:inline-flex"
+          >
+            GitHub
+          </a>
+          <Link href="/resume" className="btn btn-ink hidden text-sm md:inline-flex">
             CV
           </Link>
           <Link href="/#contact" className="btn btn-primary text-sm">

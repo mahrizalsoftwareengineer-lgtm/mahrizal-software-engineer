@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PrintCvButton } from "@/components/PrintCvButton";
-import { experience, resume, site, skills } from "@/content/site";
+import { experience, githubRepos, resume, site, skills } from "@/content/site";
 import { absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -54,9 +54,23 @@ export default function ResumePage() {
             <p className="prose-muted mt-4 text-sm">
               {site.location} · {site.email} · {site.phoneDisplay}
             </p>
-            <p className="prose-muted mt-1 text-sm">
-              {site.github.replace("https://", "")} ·{" "}
-              {site.linkedin.replace("https://", "")}
+            <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              <a
+                href={site.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-deep hover:text-ink"
+              >
+                GitHub · {site.githubHandle}
+              </a>
+              <a
+                href={site.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-deep hover:text-ink"
+              >
+                LinkedIn
+              </a>
             </p>
           </div>
         </header>
@@ -100,6 +114,38 @@ export default function ResumePage() {
               <li key={item.title}>
                 <p className="font-semibold text-ink">{item.title}</p>
                 <p className="prose-muted text-sm">{item.detail}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mt-10">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-ink-soft">
+            GitHub
+          </h2>
+          <p className="mt-3 text-sm">
+            <a
+              href={site.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-deep hover:text-ink"
+            >
+              {site.github}
+            </a>
+          </p>
+          <ul className="prose-muted mt-3 list-disc space-y-1 pl-5 text-sm">
+            {githubRepos.map((repo) => (
+              <li key={repo.url}>
+                <a
+                  href={repo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-deep hover:text-ink"
+                >
+                  {repo.name}
+                </a>
+                {" — "}
+                {repo.description}
               </li>
             ))}
           </ul>

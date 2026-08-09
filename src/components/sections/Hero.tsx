@@ -35,6 +35,14 @@ export function Hero() {
               <Link href="/#work" className="btn btn-primary">
                 View selected work
               </Link>
+              <a
+                href={site.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
+              >
+                GitHub
+              </a>
               <Link href={site.resumeUrl} className="btn btn-ghost">
                 View CV
               </Link>
@@ -42,7 +50,17 @@ export function Hero() {
                 Contact me
               </Link>
             </div>
-            <p className="rise rise-delay-3 mt-8 max-w-xl text-sm text-[#9fc4c7]">
+            <p className="rise rise-delay-3 mt-6 text-sm text-[#9fc4c7]">
+              <a
+                href={site.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-white/30 underline-offset-4 transition-colors hover:text-white hover:decoration-white/70"
+              >
+                github.com/{site.githubHandle}
+              </a>
+            </p>
+            <p className="rise rise-delay-3 mt-4 max-w-xl text-sm text-[#9fc4c7]">
               {site.availability}
             </p>
           </div>

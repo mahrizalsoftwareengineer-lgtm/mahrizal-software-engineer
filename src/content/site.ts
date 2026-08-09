@@ -10,6 +10,7 @@ export const site = {
   whatsapp: "6288210909810",
   phoneDisplay: "+62 882-1090-9810",
   github: "https://github.com/mahrizalsoftwareengineer-lgtm",
+  githubHandle: "mahrizalsoftwareengineer-lgtm",
   linkedin: "https://linkedin.com/in/mahrizal",
   siteUrl: "https://mahrizal-software-engineer.vercel.app",
   resumeUrl: "/resume",
@@ -137,6 +138,19 @@ export const about = {
     "Use AI and analytics only when they remove a measurable bottleneck.",
   ],
 } as const;
+
+export const githubRepos = [
+  {
+    name: "mahrizal-software-engineer",
+    url: "https://github.com/mahrizalsoftwareengineer-lgtm/mahrizal-software-engineer",
+    description: "Personal portfolio — Next.js, case studies, CV page, security headers.",
+  },
+  {
+    name: "thoriqulirsyad",
+    url: "https://github.com/mahrizalsoftwareengineer-lgtm/thoriqulirsyad",
+    description: "Pondok Pesantren Thoriqul Irsyad website — Next.js, Supabase, admin panel.",
+  },
+] as const;
 
 export const resume = {
   summary:
