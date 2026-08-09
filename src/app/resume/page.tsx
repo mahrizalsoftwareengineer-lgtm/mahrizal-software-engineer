@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PrintCvButton } from "@/components/PrintCvButton";
 import { experience, resume, site, skills } from "@/content/site";
@@ -35,17 +36,29 @@ export default function ResumePage() {
           </div>
         </div>
 
-        <header className="mt-8 border-b border-line pb-6">
-          <h1 className="display text-4xl text-ink md:text-5xl">{site.fullName}</h1>
-          <p className="mt-2 text-lg font-medium text-teal-deep">{site.title}</p>
-          <p className="prose-muted mt-2">{site.titleSupport}</p>
-          <p className="prose-muted mt-4 text-sm">
-            {site.location} · {site.email} · {site.phoneDisplay}
-          </p>
-          <p className="prose-muted mt-1 text-sm">
-            {site.github.replace("https://", "")} ·{" "}
-            {site.linkedin.replace("https://", "")}
-          </p>
+        <header className="mt-8 flex flex-col gap-6 border-b border-line pb-6 sm:flex-row sm:items-center">
+          <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border border-line">
+            <Image
+              src={site.photo}
+              alt={site.photoAlt}
+              fill
+              sizes="112px"
+              className="object-cover object-[center_15%]"
+              priority
+            />
+          </div>
+          <div>
+            <h1 className="display text-4xl text-ink md:text-5xl">{site.fullName}</h1>
+            <p className="mt-2 text-lg font-medium text-teal-deep">{site.title}</p>
+            <p className="prose-muted mt-2">{site.titleSupport}</p>
+            <p className="prose-muted mt-4 text-sm">
+              {site.location} · {site.email} · {site.phoneDisplay}
+            </p>
+            <p className="prose-muted mt-1 text-sm">
+              {site.github.replace("https://", "")} ·{" "}
+              {site.linkedin.replace("https://", "")}
+            </p>
+          </div>
         </header>
 
         <section className="mt-8">

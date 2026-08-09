@@ -12,6 +12,7 @@ export function JsonLd() {
     url: absoluteUrl("/"),
     email: site.email,
     telephone: site.phoneDisplay,
+    image: absoluteUrl(site.photo),
     address: {
       "@type": "PostalAddress",
       addressLocality: "Bogor",

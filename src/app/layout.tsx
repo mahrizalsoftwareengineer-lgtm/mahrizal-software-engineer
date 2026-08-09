@@ -71,12 +71,19 @@ export const metadata: Metadata = {
     siteName: `${site.fullName} Portfolio`,
     title: seo.title,
     description: seo.description,
+    images: [
+      {
+        url: absoluteUrl(site.photo),
+        alt: site.photoAlt,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: seo.title,
     description: seo.description,
     creator: "@mahrizal",
+    images: [absoluteUrl(site.photo)],
   },
   formatDetection: {
     email: false,

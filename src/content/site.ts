@@ -13,6 +13,8 @@ export const site = {
   linkedin: "https://linkedin.com/in/mahrizal",
   siteUrl: "https://mahrizal-software-engineer.vercel.app",
   resumeUrl: "/resume",
+  photo: "/images/mahrizal.png",
+  photoAlt: "Portrait of Mahrizal, AI Developer and Software Engineer",
   availability: "Open to opportunities — AI Developer, Software Engineer, System Analyst",
   heroStack: [
     "Laravel",
