@@ -1,7 +1,7 @@
 export type RoleTag =
   | "Engineering"
   | "System Analysis"
-  | "Delivery/PM"
+  | "Project Manager"
   | "AI Developer";
 
 export type CaseStudy = {
@@ -32,34 +32,34 @@ export type CaseStudy = {
 export const cases: CaseStudy[] = [
   {
     slug: "sia-militan",
-    title: "SIA Militan: sistem informasi anggota untuk 2.000 user aktif",
+    title: "SIA Militan: membership information system for 2,000 active users",
     subtitle:
-      "Platform komunitas Laravel yang dibangun end-to-end dengan pendekatan AI-assisted development, Redis, dan message queue.",
+      "A community Laravel platform built end-to-end with AI-assisted development, Redis, and message queues.",
     tags: ["AI Developer", "Engineering", "System Analysis"],
     year: "2023–2025",
     status: "Live",
     featured: true,
     context:
-      "Komunitas membutuhkan sistem informasi anggota (SIA) yang mampu menangani operasional harian secara terpusat — data anggota, aktivitas, dan layanan internal — dengan jumlah pengguna aktif mencapai sekitar 2.000 orang.",
+      "A community needed a membership information system (SIA) that could centralize daily operations — member data, activities, and internal services — for about 2,000 active users.",
     problem:
-      "Tanpa sistem yang andal, data anggota mudah tidak sinkron, akses rentan, dan performa menurun saat traffic atau proses background meningkat. Diperlukan fondasi yang aman sekaligus siap scale untuk beban nyata.",
-    role: "AI Developer — ownership end-to-end: arsitektur, implementasi, security, dan delivery dengan AI-assisted development.",
+      "Without a reliable system, member data easily drifts out of sync, access becomes fragile, and performance drops as traffic or background work increases. The system needed a secure foundation that could handle real production load.",
+    role: "AI Developer — end-to-end ownership of architecture, implementation, security, and delivery with AI-assisted development.",
     actions: [
-      "Membangun SIA Militan end-to-end dengan Laravel sebagai core untuk manajemen anggota komunitas.",
-      "Memakai AI-assisted development untuk mempercepat implementasi, dengan keputusan arsitektur dan quality gate tetap di tangan sendiri.",
-      "Menerapkan praktik security tinggi pada autentikasi, otorisasi, dan proteksi data sensitif anggota.",
-      "Merancang system design untuk performa: caching, message queue, dan Redis untuk workload yang tidak harus sinkron.",
-      "Memastikan alur operasional tetap stabil untuk pemakaian harian oleh ribuan user aktif.",
+      "Built SIA Militan end-to-end with Laravel as the core for community membership management.",
+      "Used AI-assisted development to accelerate implementation, while keeping architecture decisions and quality gates under personal ownership.",
+      "Applied strong security practices for authentication, authorization, and protection of sensitive member data.",
+      "Designed the system for performance with caching, message queues, and Redis for asynchronous workloads.",
+      "Kept daily operations stable for thousands of active users.",
     ],
     tradeoffs: [
-      "Memisahkan pekerjaan berat ke message queue agar request user tetap responsif.",
-      "Memakai cache/Redis untuk mengurangi beban database pada data yang sering diakses, dengan trade-off invalidation yang harus dikelola hati-hati.",
-      "AI dipakai untuk akselerasi coding — bukan menggantikan review, security, dan keputusan desain.",
+      "Moved heavy work into message queues so user requests stayed responsive.",
+      "Used cache/Redis to reduce database load on frequently accessed data, accepting careful invalidation as the trade-off.",
+      "Used AI to accelerate coding — not to replace review, security, or design decisions.",
     ],
     results: [
-      "Sistem dipakai sekitar 2.000 user aktif untuk operasional komunitas.",
-      "Arsitektur siap menahan beban proses background tanpa mengorbankan pengalaman user.",
-      "Bukti AI Developer yang tetap accountable: delivery production-scale dengan security dan system design yang solid.",
+      "The system is used by about 2,000 active users for community operations.",
+      "Architecture can absorb background workloads without sacrificing user experience.",
+      "Demonstrates accountable AI Developer delivery at production scale with solid security and system design.",
     ],
     stack: [
       "PHP",
@@ -72,39 +72,38 @@ export const cases: CaseStudy[] = [
       "Security hardening",
     ],
     image: "/cases/sia-militan.png",
-    imageAlt:
-      "Halaman login SIA Militan — pilihan peran Anggota dan Admin",
+    imageAlt: "SIA Militan login page — Member and Admin role selection",
     links: {},
   },
   {
     slug: "muc-net-timesheet",
-    title: "MUC Net Timesheet: dashboard productivity untuk penugasan",
+    title: "MUC Net Timesheet: productivity dashboard for assignments",
     subtitle:
-      "Dashboard analytics dari data timesheet MySQL — monitoring, controlling, dan keputusan berbasis data.",
+      "Analytics dashboard from MySQL timesheet data — monitoring, controlling, and data-driven decisions.",
     tags: ["AI Developer", "Engineering", "System Analysis"],
     year: "2023–2025",
     status: "Live",
     featured: true,
     context:
-      "Tim internal sudah punya data timesheet harian di MySQL. Yang dibutuhkan manajemen adalah dashboard productivity yang mengubah data tersebut menjadi insight untuk memantau penugasan, beban kerja, dan kepatuhan pengisian.",
+      "Internal teams already stored daily timesheet data in MySQL. Management needed a productivity dashboard that turned that data into insight for assignment monitoring, workload visibility, and filling compliance.",
     problem:
-      "Data aktivitas kerja ada, tetapi belum mudah dibaca untuk keputusan. Tanpa lapisan analytics, monitoring & controlling penugasan masih manual dan rentan terlambat.",
-    role: "AI Developer — fokus mengolah data timesheet menjadi dashboard productivity untuk keputusan operasional.",
+      "Work activity data existed, but it was hard to read for decisions. Without an analytics layer, monitoring and controlling assignments stayed manual and often late.",
+    role: "AI Developer — focused on turning timesheet data into a productivity dashboard for operational decisions.",
     actions: [
-      "Menarik dan mengolah data timesheet dari MySQL menjadi metrik productivity yang relevan untuk penugasan.",
-      "Membangun dashboard analytics untuk monitoring progress, beban kerja, dan controlling kepatuhan pengisian.",
-      "Merancang indikator yang actionable agar manajemen bisa mengambil keputusan alokasi resource berbasis data aktual.",
-      "Menyelaraskan kebutuhan bisnis (apa yang perlu dipantau) dengan model data timesheet yang tersedia.",
-      "Menyajikan insight dalam tampilan yang mudah dipakai harian — bukan sekadar laporan mentah.",
+      "Extracted and processed timesheet data from MySQL into productivity metrics relevant to assignments.",
+      "Built an analytics dashboard for progress monitoring, workload visibility, and timesheet compliance control.",
+      "Designed actionable indicators so management could allocate resources based on actual data.",
+      "Aligned business needs (what must be monitored) with the available timesheet data model.",
+      "Presented insights in a UI that is usable daily — not just raw reports.",
     ],
     tradeoffs: [
-      "Memilih metrik yang benar-benar dipakai keputusan, bukan dashboard yang penuh chart tanpa action.",
-      "Menjaga query/agregasi cukup cepat untuk pemakaian harian tanpa over-engineer pipeline analytics.",
+      "Chose metrics that drive decisions, not a dashboard full of charts with no action.",
+      "Kept queries/aggregations fast enough for daily use without over-engineering the analytics pipeline.",
     ],
     results: [
-      "Manajemen punya dashboard productivity berbasis data timesheet aktual.",
-      "Monitoring penugasan dan controlling pengisian timesheet jadi lebih terukur.",
-      "Keputusan alokasi resource dan evaluasi progress lebih berbasis data, bukan asumsi.",
+      "Management gained a productivity dashboard based on actual timesheet data.",
+      "Assignment monitoring and timesheet compliance control became more measurable.",
+      "Resource allocation and progress evaluation became more data-driven, less assumption-based.",
     ],
     stack: [
       "Laravel",
@@ -114,116 +113,110 @@ export const cases: CaseStudy[] = [
       "PHP",
     ],
     // image: "/cases/muc-net-timesheet.png",
-    // imageAlt: "Dashboard productivity MUC Net Timesheet",
+    // imageAlt: "MUC Net Timesheet productivity dashboard",
     links: {},
-    note: "Tambahkan screenshot dashboard (blur data sensitif) ke public/cases/muc-net-timesheet.png. Isi metrik kepatuhan/produktivitas di results jika ada angka resmi.",
+    note: "Add a dashboard screenshot (blur sensitive data) to public/cases/muc-net-timesheet.png. Add compliance/productivity metrics to results when official numbers are available.",
   },
   {
     slug: "requirement-to-backlog",
-    title: "Dari requirement kabur ke backlog yang bisa di-ship",
+    title: "From fuzzy requirements to a backlog that can ship",
     subtitle:
-      "Menyederhanakan permintaan bisnis menjadi scope, flow, dan acceptance criteria yang jelas.",
-    tags: ["System Analysis", "Delivery/PM", "Engineering"],
+      "Simplifying business requests into clear scope, flows, and acceptance criteria.",
+    tags: ["System Analysis", "Project Manager", "Engineering"],
     year: "2024–2025",
     status: "Case study",
     context:
-      // TODO: ganti dengan konteks projectmu (boleh anonim)
-      "Di project internal/klien, permintaan datang dalam bentuk keinginan luas — “mau sistem yang bisa…” — tanpa batas yang jelas antar stakeholder.",
+      "On an internal/client project, requests arrived as broad wishes — “we want a system that can…” — without clear boundaries across stakeholders.",
     problem:
-      "Scope mengambang, ekspektasi beda-beda, dan risiko rework tinggi jika langsung coding tanpa alignment.",
-    role: "System analyst dengan keterlibatan delivery dan keputusan teknis.",
+      "Scope floated, expectations differed, and rework risk was high if coding started without alignment.",
+    role: "System analyst with delivery involvement and technical decision-making.",
     actions: [
-      "Melakukan discovery singkat: siapa user, apa outcome yang diharapkan, apa constraint-nya.",
-      "Memetakan proses as-is → to-be dalam flow yang mudah dibahas bersama bisnis.",
-      "Menulis use case / acceptance criteria untuk MVP vs phase berikutnya.",
-      "Menyelaraskan prioritas dengan kapasitas implementasi agar timeline realistis.",
+      "Ran a short discovery: who the users are, what outcome is expected, and what the constraints are.",
+      "Mapped as-is → to-be processes into flows that are easy to discuss with business stakeholders.",
+      "Wrote use cases / acceptance criteria for MVP vs later phases.",
+      "Aligned priorities with implementation capacity so the timeline stayed realistic.",
     ],
     tradeoffs: [
-      "Memotong nice-to-have agar MVP tetap bisa dirilis tanpa mengorbankan inti value.",
-      "Dokumentasi dibuat cukup untuk alignment — tidak over-produce.",
+      "Cut nice-to-haves so the MVP could ship without sacrificing core value.",
+      "Kept documentation enough for alignment — without over-producing.",
     ],
     results: [
-      // TODO: ganti dengan hasil nyata (angka lebih baik)
-      "Stakeholder punya satu sumber kebenaran untuk scope.",
-      "Tim implementasi punya kriteria selesai yang bisa diuji.",
-      "Rework akibat salah paham requirement berkurang.",
+      "Stakeholders shared one source of truth for scope.",
+      "The implementation team had testable done criteria.",
+      "Rework caused by misunderstood requirements decreased.",
     ],
     stack: ["Process mapping", "Use cases", "Backlog prioritization", "Agile delivery"],
     links: {},
-    note: "Anonimize nama perusahaan. Tambahkan screenshot flow/AC (blur data sensitif) di folder public/cases/.",
+    note: "Anonymize company names. Add flow/AC screenshots (blur sensitive data) under public/cases/.",
   },
   {
     slug: "controlled-release-delivery",
-    title: "Rilis terkontrol: quality gate di tengah deadline ketat",
+    title: "Controlled release: quality gates under a tight deadline",
     subtitle:
-      "Menjaga prioritas, risiko, dan komunikasi stakeholder sampai fitur benar-benar live.",
-    tags: ["Delivery/PM", "Engineering"],
+      "Protecting priorities, risks, and stakeholder communication until the feature is truly live.",
+    tags: ["Project Manager", "Engineering"],
     year: "2024–2025",
     status: "Case study",
     context:
-      // TODO: ganti dengan konteks projectmu
-      "Project dengan tekanan waktu, dependency lintas pihak, dan ekspektasi fitur yang terus bertambah mendekati deadline.",
+      "A project with time pressure, cross-party dependencies, and feature expectations that kept growing near the deadline.",
     problem:
-      "Tanpa gate yang jelas, kualitas mudah longsor: bug late, status kabur, dan scope tidak terkendali.",
-    role: "Tech lead / acting engineering manager / delivery lead teknis.",
+      "Without clear gates, quality slips easily: late bugs, unclear status, and uncontrolled scope.",
+    role: "Tech lead / acting engineering manager / technical project manager.",
     actions: [
-      "Memecah work menjadi milestone dan critical path yang bisa dipantau.",
-      "Membuat risk list singkat + mitigasi (siapa owner, apa fallback-nya).",
-      "Menetapkan definisi done sederhana: review, testing ringan, dan kriteria rilis.",
-      "Memberi update status yang dipahami non-teknis — progress, blocker, keputusan.",
-      "Memutuskan cut/postpone fitur agar tanggal rilis tetap bertahan.",
+      "Broke work into milestones and a monitorable critical path.",
+      "Built a short risk list with mitigations (owner and fallback).",
+      "Set a simple definition of done: review, light testing, and release criteria.",
+      "Shared status updates non-technical stakeholders could understand — progress, blockers, decisions.",
+      "Decided what to cut or postpone so the release date could hold.",
     ],
     tradeoffs: [
-      "Memilih ship date yang dapat diandalkan daripada memaksakan semua fitur masuk.",
-      "Quality gate dibuat proporsional — cukup untuk mencegah incident, tidak memperlambat tim.",
+      "Chose a reliable ship date over forcing every feature into the release.",
+      "Kept quality gates proportional — enough to prevent incidents without slowing the team.",
     ],
     results: [
-      // TODO: isi metrik nyata jika ada
-      "Rilis berjalan dengan scope yang disepakati ulang secara sadar.",
-      "Stakeholder paham apa yang masuk, apa yang ditunda, dan kenapa.",
-      "Tim punya ritme status yang mengurangi kejutan di minggu terakhir.",
+      "The release shipped with a consciously re-agreed scope.",
+      "Stakeholders understood what made it in, what was deferred, and why.",
+      "The team had a status rhythm that reduced last-week surprises.",
     ],
     stack: ["Milestone planning", "Risk management", "Code review", "Release checklist"],
     links: {},
-    note: "Cocok ditonjolkan saat apply Engineering Manager / Project Manager.",
+    note: "Strong fit when applying for Engineering Manager / Project Manager roles.",
   },
   {
     slug: "ai-workflow-feature",
-    title: "Fitur AI yang masuk ke workflow — bukan chatbot pajangan",
+    title: "AI features that enter the workflow — not decorative chatbots",
     subtitle:
-      "Membangun bantuan AI yang measurable: input jelas, output berguna, ada fallback manusia.",
+      "Building measurable AI assistance: clear input, useful output, human fallback when needed.",
     tags: ["AI Developer", "Engineering", "System Analysis"],
     year: "2025–2026",
     status: "In progress",
     featured: true,
     context:
-      // TODO: sesuaikan use case AI-mu (contoh: ringkas dokumen, klasifikasi tiket, draft balasan, FAQ internal)
-      "Proses manual lambat dan rentan inkonsistensi. Tim butuh bantuan AI untuk mempercepat langkah berulang — bukan chat bebas tanpa tujuan.",
+      "Manual processes were slow and inconsistent. The team needed AI assistance to speed up repeatable steps — not open-ended chat without a goal.",
     problem:
-      "Demo AI sering terlihat keren tapi tidak terhubung ke pekerjaan harian. Tanpa framing masalah, adopsi rendah dan risiko hallucination tinggi.",
-    role: "AI developer + engineer, dengan framing masalah ala system analyst.",
+      "AI demos often look impressive but stay disconnected from daily work. Without problem framing, adoption stays low and hallucination risk stays high.",
+    role: "AI developer + engineer, with system-analyst style problem framing.",
     actions: [
-      "Memilih use case yang measurable (waktu, akurasi, atau throughput).",
-      "Mendesain flow: input → processing (prompt/RAG/tools) → output → human review bila perlu.",
-      "Mengintegrasikan model/API dengan guardrail dasar: fallback, batasan data, dan contoh evaluasi.",
-      "Membangun UI yang menjelaskan apa yang AI bantu — bukan black box.",
+      "Chose a measurable use case (time, accuracy, or throughput).",
+      "Designed the flow: input → processing (prompt/RAG/tools) → output → human review when needed.",
+      "Integrated model/API with basic guardrails: fallback, data boundaries, and evaluation examples.",
+      "Built a UI that explains what the AI helps with — not a black box.",
     ],
     tradeoffs: [
-      "Menyeimbangkan akurasi, latency, dan cost.",
-      "Memilih solusi sederhana dulu (prompt + struktur) sebelum menambah kompleksitas RAG.",
+      "Balanced accuracy, latency, and cost.",
+      "Started with a simple solution (prompt + structure) before adding RAG complexity.",
     ],
     results: [
-      // TODO: ganti dengan hasil eval / demo
-      "Prototype/demo yang bisa dijalankan dan ditunjukkan ke interviewer/klien.",
-      "Kriteria evaluasi awal untuk membedakan “berhasil” vs “terlihat pintar”.",
-      "Pola kerja yang bisa dipindah ke use case bisnis lain.",
+      "A runnable prototype/demo that can be shown to interviewers or clients.",
+      "Initial evaluation criteria to separate “works” from “looks smart”.",
+      "A working pattern that can transfer to other business use cases.",
     ],
     stack: ["TypeScript", "LLM API", "Prompt design", "Next.js", "Eval checklist"],
     links: {
       github: "https://github.com/YOUR_GITHUB_USERNAME/YOUR_AI_REPO",
       demo: "https://YOUR_AI_DEMO.vercel.app",
     },
-    note: "Kalau belum ada project AI kerja: selesaikan 1 mini-product publik kecil tapi utuh, lalu update case ini.",
+    note: "If there is no work AI project yet: finish one small public mini-product, then update this case.",
   },
 ];
 

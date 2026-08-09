@@ -9,10 +9,10 @@ export function Work() {
         <p className="eyebrow">Selected work</p>
         <div className="mt-3 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <h2 className="display max-w-3xl text-3xl text-ink md:text-5xl">
-            Case studies yang menunjukkan role, keputusan, dan impact.
+            Case studies that show role, decisions, and impact.
           </h2>
           <p className="prose-muted max-w-sm text-sm md:text-right">
-            Tiap case bisa dibaca dari sudut Engineering, Analysis, Delivery, atau AI Developer.
+            Each case can be read through Engineering, Analysis, Delivery, or AI Developer.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export function Work() {
                 <span className="hidden md:block" />
               )}
               <span className="text-sm font-semibold text-teal-deep">
-                Baca case →
+                Read case →
               </span>
             </Link>
           ))}

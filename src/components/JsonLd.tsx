@@ -21,10 +21,6 @@ export function JsonLd() {
       (url) => url && !url.includes("YOUR_"),
     ),
     knowsAbout: [...skills.hard, ...skills.soft],
-    worksFor: {
-      "@type": "Organization",
-      name: "Mahrizal Digital",
-    },
   };
 
   const website = {
@@ -33,7 +29,7 @@ export function JsonLd() {
     name: `${site.fullName} Portfolio`,
     url: absoluteUrl("/"),
     description: seo.description,
-    inLanguage: "id-ID",
+    inLanguage: "en-US",
     publisher: {
       "@type": "Person",
       name: site.fullName,

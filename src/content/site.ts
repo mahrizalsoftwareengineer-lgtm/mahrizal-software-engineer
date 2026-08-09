@@ -3,7 +3,7 @@ export const site = {
   fullName: "Mahrizal",
   title: "Software Engineer · System Analyst · Project Manager · AI Developer",
   tagline:
-    "Saya mengubah masalah bisnis yang masih kabur menjadi solusi software & AI yang siap live — dari analisis sampai delivery.",
+    "I turn ambiguous business problems into production-ready software and AI solutions — from analysis to delivery.",
   location: "Bogor, Indonesia",
   email: "amahrizal@gmail.com",
   whatsapp: "6288210909810",
@@ -44,59 +44,59 @@ export const roles = [
     id: "engineering",
     label: "Software Engineer",
     summary:
-      "Membangun sistem yang rapi, maintainable, dan siap production — dari arsitektur sampai rilis.",
+      "I build clean, maintainable, production-ready systems — from architecture to release.",
   },
   {
     id: "analysis",
     label: "System Analyst",
     summary:
-      "Memecah kebutuhan bisnis yang kabur menjadi requirement, flow, dan acceptance criteria yang jelas.",
+      "I break ambiguous business needs into clear requirements, flows, and acceptance criteria.",
   },
   {
     id: "delivery",
     label: "Project Manager",
     summary:
-      "Menjaga scope, risiko, dan timeline agar tim tetap fokus dan stakeholder tetap aligned.",
+      "I protect scope, risk, and timeline so the team stays focused and stakeholders stay aligned.",
   },
   {
     id: "ai",
     label: "AI Developer",
     summary:
-      "Mendesain fitur AI yang terhubung ke workflow nyata — bukan sekadar demo model.",
+      "I design AI features that plug into real workflows — not demo-only model showcases.",
   },
 ] as const;
 
 export const strengths = [
   {
     title: "Problem → Solution",
-    body: "Mulai dari masalah bisnis, baru memilih teknologi. Tidak memaksakan stack yang berlebihan.",
+    body: "Start from the business problem, then choose the technology. No unnecessary stack for show.",
   },
   {
     title: "End-to-end ownership",
-    body: "Nyaman memegang analisis, keputusan teknis, implementasi, sampai komunikasi rilis.",
+    body: "Comfortable owning analysis, technical decisions, implementation, and release communication.",
   },
   {
-    title: "Delivery dengan trade-off",
-    body: "Tahu kapan memotong scope, kapan menjaga kualitas, dan bagaimana menjelaskan keputusan itu.",
+    title: "Delivery with trade-offs",
+    body: "I know when to cut scope, when to protect quality, and how to explain those decisions clearly.",
   },
   {
-    title: "Komunikasi yang jelas",
-    body: "Bisa bicara dengan tim teknis dan non-teknis tanpa kehilangan esensi keputusan.",
+    title: "Clear communication",
+    body: "I can talk with both technical and non-technical stakeholders without losing the point of the decision.",
   },
 ] as const;
 
 export const about = {
-  headline: "Saya membangun kredibilitas lewat hasil yang bisa dicek, bukan klaim kosong.",
+  headline: "I build credibility through verifiable results, not empty claims.",
   paragraphs: [
-    "Saya sedang membangun jalur karier yang sehat: lingkungan kerja yang mendukung, sambil serius menumbuhkan praktik digital untuk UMKM melalui Mahrizal Digital.",
-    "Di kerjaan, saya paling kuat saat bridging — menghubungkan kebutuhan bisnis, keputusan teknis, dan eksekusi yang bisa di-ship. Itu sebabnya portfolio ini menampilkan peran Engineering, Analysis, Delivery, dan AI dalam satu narasi yang konsisten.",
-    "Saya mencari tim dengan suasana kolaboratif dan standar yang jelas. Dari situ saya ingin tumbuh lebih dalam secara profesional, sambil agency tetap jalan sebagai praktik jangka panjang.",
+    "I am building a healthy career path in a supportive work environment where I can deepen my craft and deliver meaningful impact.",
+    "At work, I am strongest at bridging — connecting business needs, technical decisions, and execution that can ship. That is why this portfolio presents Engineering, Analysis, Delivery, and AI through one consistent narrative.",
+    "I am looking for a collaborative team with clear standards. From there, I want to grow deeper professionally and keep raising the quality of what I ship.",
   ],
   principles: [
-    "Mulai dari masalah, bukan dari tools.",
-    "Ship yang berguna lebih dulu, sempurnakan setelah ada sinyal nyata.",
-    "Dokumentasi cukup agar orang lain bisa lanjut tanpa menebak.",
-    "AI hanya dipakai jika menyelesaikan bottleneck yang measurable.",
+    "Start from the problem, not from the tools.",
+    "Ship something useful first; refine after real signals appear.",
+    "Document just enough so others can continue without guessing.",
+    "Use AI only when it removes a measurable bottleneck.",
   ],
 } as const;
 

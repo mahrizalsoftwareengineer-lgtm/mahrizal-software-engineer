@@ -6,7 +6,7 @@ export function Roles() {
       <div className="container-page">
         <p className="eyebrow">Roles</p>
         <h2 className="display mt-3 max-w-3xl text-3xl text-ink md:text-5xl">
-          Satu orang, beberapa lensa — tergantung masalah yang harus diselesaikan.
+          One person, several lenses — depending on the problem to solve.
         </h2>
         <div className="mt-12 grid gap-10 md:grid-cols-2">
           {roles.map((role) => (

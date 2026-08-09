@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!item) return { title: "Case not found", robots: { index: false } };
 
   const url = absoluteUrl(`/work/${item.slug}`);
-  const description = `${item.subtitle} Case study oleh ${site.fullName} — ${item.tags.join(", ")}.`;
+  const description = `${item.subtitle} Case study by ${site.fullName} — ${item.tags.join(", ")}.`;
 
   return {
     title: item.title,
@@ -69,7 +69,7 @@ export default async function CasePage({ params }: Props) {
       url: absoluteUrl("/"),
     },
     keywords: [...item.tags, ...item.stack].join(", "),
-    inLanguage: "id-ID",
+    inLanguage: "en-US",
   };
 
   return (
@@ -79,12 +79,20 @@ export default async function CasePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(caseLd) }}
       />
       <div className="container-page">
-        <Link
-          href="/#work"
-          className="text-sm font-semibold text-teal-deep transition-colors hover:text-ink"
-        >
-          ← Kembali ke selected work
-        </Link>
+        <div className="flex flex-wrap gap-4">
+          <Link
+            href="/"
+            className="text-sm font-semibold text-teal-deep transition-colors hover:text-ink"
+          >
+            ← Home
+          </Link>
+          <Link
+            href="/#work"
+            className="text-sm font-semibold text-teal-deep transition-colors hover:text-ink"
+          >
+            ← Back to selected work
+          </Link>
+        </div>
 
         <header className="mt-8 max-w-3xl">
           <div className="flex flex-wrap items-center gap-2">
@@ -126,10 +134,10 @@ export default async function CasePage({ params }: Props) {
           <div className="space-y-10">
             <Section title="Context" body={item.context} />
             <Section title="Problem" body={item.problem} />
-            <Section title="Role saya" body={item.role} />
+            <Section title="My role" body={item.role} />
 
             <section>
-              <h2 className="text-xl font-semibold text-ink">Yang saya lakukan</h2>
+              <h2 className="text-xl font-semibold text-ink">What I did</h2>
               <ul className="prose-muted mt-4 list-disc space-y-2 pl-5">
                 {item.actions.map((action) => (
                   <li key={action}>{action}</li>
@@ -147,7 +155,7 @@ export default async function CasePage({ params }: Props) {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-ink">Impact / hasil</h2>
+              <h2 className="text-xl font-semibold text-ink">Impact / results</h2>
               <ul className="prose-muted mt-4 list-disc space-y-2 pl-5">
                 {item.results.map((result) => (
                   <li key={result}>{result}</li>
@@ -157,14 +165,14 @@ export default async function CasePage({ params }: Props) {
 
             {item.note ? (
               <p className="rounded-xl border border-dashed border-teal/40 bg-teal/5 px-4 py-3 text-sm text-ink-soft">
-                Catatan edit: {item.note}
+                Editor note: {item.note}
               </p>
             ) : null}
           </div>
 
           <aside className="h-fit border border-line bg-paper/80 p-5 md:sticky md:top-24">
             <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-ink-soft">
-              Stack & bukti
+              Stack & evidence
             </h2>
             <div className="mt-4 flex flex-wrap gap-2">
               {item.stack.map((tech) => (
@@ -184,14 +192,14 @@ export default async function CasePage({ params }: Props) {
                 <EvidenceLink href={item.links.github} label="GitHub" />
               ) : null}
               {item.image ? (
-                <p className="text-ink-soft">Screenshot tersedia di halaman ini.</p>
+                <p className="text-ink-soft">Screenshot available on this page.</p>
               ) : null}
               {!item.links.live &&
               !item.links.demo &&
               !item.links.github &&
               !item.image ? (
                 <p className="text-ink-soft">
-                  Tambahkan link live/GitHub di `src/content/cases.ts`.
+                  Add a live/GitHub link in `src/content/cases.ts`.
                 </p>
               ) : null}
             </div>
@@ -216,7 +224,7 @@ function EvidenceLink({ href, label }: { href: string; label: string }) {
   if (isPlaceholder) {
     return (
       <span className="block font-semibold text-ink-soft">
-        {label} (isi URL dulu)
+        {label} (add URL first)
       </span>
     );
   }

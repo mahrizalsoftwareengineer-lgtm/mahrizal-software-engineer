@@ -6,7 +6,7 @@ export const siteUrl =
 export const seo = {
   title: `${site.fullName} — Software Engineer, System Analyst & AI Developer`,
   description:
-    "Portfolio Mahrizal: Software Engineer, System Analyst, Project Manager, dan AI Developer di Bogor, Indonesia. Spesialis Laravel, React, Next.js, PostgreSQL, Redis, serta system design untuk produk yang siap production.",
+    "Portfolio of Mahrizal: Software Engineer, System Analyst, Project Manager, and AI Developer based in Bogor, Indonesia. Specializing in Laravel, React, Next.js, PostgreSQL, Redis, and system design for production-ready products.",
   keywords: [
     "Mahrizal",
     "Mahrizal Software Engineer",
@@ -16,7 +16,7 @@ export const seo = {
     "Laravel Developer Indonesia",
     "Next.js Developer",
     "AI Developer Indonesia",
-    "Portfolio Software Engineer",
+    "Software Engineer Portfolio",
     "SIA Militan",
     "Engineering Manager Indonesia",
   ],

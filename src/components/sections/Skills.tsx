@@ -6,11 +6,11 @@ export function Skills() {
       <div className="container-page">
         <p className="eyebrow">Skills</p>
         <h2 className="display mt-3 max-w-3xl text-3xl text-ink md:text-5xl">
-          Stack dan kemampuan yang bisa langsung dipakai di kerjaan.
+          Stack and capabilities ready for real work.
         </h2>
         <p className="prose-muted mt-4 max-w-2xl">
-          Ringkas untuk recruiter: hard skill untuk eksekusi teknis, soft skill
-          untuk kolaborasi dan delivery.
+          Kept concise for recruiters: hard skills for technical execution, soft
+          skills for collaboration and delivery.
         </p>
 
         <div className="mt-12 grid gap-10 md:grid-cols-2">

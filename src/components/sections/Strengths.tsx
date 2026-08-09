@@ -6,7 +6,7 @@ export function Strengths() {
       <div className="container-page">
         <p className="eyebrow">How I create impact</p>
         <h2 className="display mt-3 max-w-3xl text-3xl text-ink md:text-5xl">
-          Impact datang dari keputusan yang tepat, bukan dari daftar tools.
+          Impact comes from the right decisions, not from a list of tools.
         </h2>
         <div className="mt-12 grid gap-8 md:grid-cols-2">
           {strengths.map((item) => (

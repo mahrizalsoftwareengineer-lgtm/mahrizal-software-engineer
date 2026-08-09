@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "id_ID",
+    locale: "en_US",
     url: absoluteUrl("/"),
     siteName: `${site.fullName} Portfolio`,
     title: seo.title,
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="id"
+      lang="en"
       className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">

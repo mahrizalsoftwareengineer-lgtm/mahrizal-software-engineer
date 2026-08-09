@@ -17,10 +17,10 @@ export function Hero() {
         </p>
         <div className="rise rise-delay-3 mt-10 flex flex-wrap gap-3">
           <Link href="/#work" className="btn btn-primary">
-            Lihat selected work
+            View selected work
           </Link>
           <Link href="/#contact" className="btn btn-ghost">
-            Hubungi saya
+            Contact me
           </Link>
         </div>
         <p className="rise rise-delay-3 mt-8 max-w-xl text-sm text-[#9fc4c7]">

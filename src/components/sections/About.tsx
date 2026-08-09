@@ -16,7 +16,7 @@ export function About() {
           </div>
         </div>
         <aside className="border border-white/10 bg-white/5 p-6 md:p-8">
-          <h3 className="text-lg font-semibold text-white">Prinsip kerja</h3>
+          <h3 className="text-lg font-semibold text-white">Working principles</h3>
           <ul className="mt-5 space-y-4 text-[#c5d7da]">
             {about.principles.map((item) => (
               <li key={item} className="border-t border-white/10 pt-4 first:border-t-0 first:pt-0">

@@ -7,20 +7,20 @@ export function Contact() {
       <div className="container-page">
         <p className="eyebrow">Contact</p>
         <h2 className="display mt-3 max-w-3xl text-3xl text-ink md:text-5xl">
-          Siap diskusi peluang kerja atau kebutuhan digital bisnis.
+          Ready to discuss opportunities or product needs.
         </h2>
         <p className="prose-muted mt-5 max-w-2xl text-lg">
-          Kirim email, WhatsApp, atau lihat GitHub untuk bukti teknis. Satu link
-          portfolio ini bisa dipakai untuk hiring dan untuk meyakinkan klien.
+          Reach out by email or WhatsApp, or review GitHub for technical proof.
+          This portfolio is built for hiring conversations and client confidence.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-3">
           <a href={`mailto:${site.email}`} className="btn btn-primary">
-            Email saya
+            Email me
           </a>
           <a
             href={getWhatsAppUrl(
-              "Halo Mahrizal, saya menemukan portfolio Anda dan ingin diskusi.",
+              "Hi Mahrizal, I found your portfolio and would like to discuss an opportunity.",
             )}
             className="btn btn-ink"
             target="_blank"
